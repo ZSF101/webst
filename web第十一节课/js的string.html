@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js对象-String</title>
+</head>
+<body>
+    <script>
+        //创建字符串对象
+        var str = new String("hello string")
+        var str = "hello string";
+        console.log(str);
+        
+        //length
+        console.log(str.length);
+        
+
+        //charAt
+        console.log(str.charAt(3));
+        
+
+        //indexof
+        console.log(str.indexOf("lo"));
+        
+        //trim,这个是去除字符串两边的空格的
+        var str = "   hello world ";
+        var str1 = str.trim
+        console.log(str1);
+
+
+        //substring(start,end) 截取字符串的,(含头不含尾)
+        console.log(str1.substring(0,5));
+        
+    </script>
+</body>
+</html>

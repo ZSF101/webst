@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS对象-JSON</title>
+</head>
+<body>
+    <script>
+        //自定义对象
+        var user = {
+            name:"TOM",
+            age:12,
+            gender:"male",
+            //function还可以有别的写法，
+            // eat:function(){
+            //     alert("用膳")
+            // }
+            eat(){
+                alert("用膳")
+            }
+        }
+        alert(user.name)
+        user.eat()
+
+
+        //定义json
+        var jsonstr = '{"name":"tom", "age":12,"addr":["北京","上海","西安"]}';
+        alert(jsonstr.name);  //这个的结果是undefined ,因为jsonstr.name你访问的是对象，但是这个是字符串。
+
+        //json的字符串->js对象
+        var obj = JSON.parse(jsonstr)
+        alert(obj.name);   //tom
+
+        //js对象 -> json字符串
+        alert(JSON.stringify(obj));
+    </script>
+</body>
+</html>
