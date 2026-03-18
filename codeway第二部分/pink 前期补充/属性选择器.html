@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        /* 选择包含属性 */
+        /* a[class]{
+            color: red;
+        } */
+         /*选择属性等于值 完全匹配 */
+         /* a[class="font"]{
+            color: red;
+        } */
+        /* 选择属性值以xx开头 */
+        /* a[class^= "font"]{
+            color: red;
+        } */
+        /* 选择属性值以xx结尾,如果等于后面接的是数字，那么不行，最好加个字符，比如t14,注意这个我没用双引号引起来，但是如果你用双引号引起的话，那么就直接“14“ */
+        /* a[class$="14"]{
+            color: red;
+        } */
+        /* 选择属性值包含xx */
+        /* a[class*=font]{
+            color: red;
+        } */
+         input[type="text"],
+         input[type=password]{
+            /* 去掉轮廓线 */
+            outline: none;
+         }
+
+
+        
+    </style>
+</head>
+<body>
+   <a href="#">修改文字颜色</a> <br>
+  <a href="#" class="font">修改文字颜色</a> <br>
+  <a href="#" class="font14">修改文字颜色</a> <br>
+  <a href="#" class="font16">修改文字颜色</a> <br>
+  <a href="#" class="red">修改文字颜色</a> <br>
+
+  <input type="text">
+  <input type="password">
+  <input type="checkbox">
+  <input type="radio">
+</body>
+</html>
