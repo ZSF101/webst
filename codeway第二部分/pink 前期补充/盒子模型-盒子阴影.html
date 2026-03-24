@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: pink;
+            margin: 100px auto;
+            /* 盒子阴影  x,y，模糊半径，扩散半径 内阴影inset,如果不写默认就是外阴影*/
+            /* box-shadow: 0 0 10px 10px inset rgba(0, 0, 0, 0.5) */
+            /* box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 30px; */
+            /* 过渡写到盒子身上。 谁做过渡给谁加 */
+            transition: .3s;
+        }
+        .box:hover{
+            width: 220px;
+            height: 220px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
