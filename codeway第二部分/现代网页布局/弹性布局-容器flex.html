@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      /* 添加弹性布局 */
+      display: flex;
+      width: 500px;
+      height: 100px;
+      border: 1px solid red;
+
+    }
+
+    .box .item {
+        /* 如果我将宽度也调整到 200px,但是父亲盒子只有500。则会占满父盒子 ，如果没写孩子的宽度，那么就会按照子盒子的内容来展开  */
+      width: 200px;
+      /* 如果你讲孩子的高度调整，那么就会优先孩子，所以 200px的高度会导致凸出来 */
+      /* height: 200px; */
+      background-color: pink;
+      border-radius: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+  </div>
+</body>
+</html>
