@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .box {
+      display: flex;
+      /* gap也是一样，去掉缝隙后再去除以盒子的数量， */
+      gap: 10px;
+      /* justify-content: space-between;这个不顶用的原因是，用了 margin-right，去不掉 */
+      /* justify-content: space-between; */
+      width: 80%;
+      border: 1px solid blue;
+      margin: 0 auto;
+    }
+    .box .item {
+      /* flex要写到 小盒子身上  优先级比 width 和 height高 */
+      /* flex 1 表示占1份 */
+      /* 这个就是父盒子的宽度/(flex总分数)=小盒子的宽度,如果父盒子的宽度不足,则会压缩小盒子，
+      但是更重要的的，如果某个子盒子的flex不是 1，则这个子盒子的宽度会根据flex值来计算，flxe（子盒子占的份数） * (父盒子/flex总分数) 
+      /* 比如我将这个flex 的值改为 2,则这个子盒子的宽度就是 2 * (父盒子/flex总分数) = 2 * (80% / 4) = 40% 
+      一共 4 个子盒子，flex 是 2，则每个份额就是父盒子/8，每个子盒子的宽度就是flex 子盒子份额*父盒子/8  */
+      flex: 1;
+      width: 80px;
+      height: 100px;
+      background-color: pink;
+      /* 如果我加上margin-right. 则他会先减去margin-right的宽度，再根据flex值来计算宽度 */
+      /* margin-right: 10px; */
+    }
+
+    .box .item:nth-child(odd) {
+      background-color: purple;
+    }
+
+    /* .box .item:nth-child(3) {
+        这个只有将第三个子盒子的 flex 的值变为2，其他子盒子默认是 1， 一个 4 个子盒子，所以一共 flex 是 5，每个 flex 份额就是父盒子/5，每个子盒子的宽度就是flex 子盒子份额*父盒子/5  第三个子盒子的宽度就是 2 * (父盒子/flex总分数) 
+      flex: 2;
+    } */
+     
+    </style>
+</head>
+<body>
+  <div class="box">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div> 
+</body>
+</html>
