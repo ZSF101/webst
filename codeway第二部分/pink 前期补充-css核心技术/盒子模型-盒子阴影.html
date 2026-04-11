@@ -11,7 +11,12 @@
             background: pink;
             margin: 100px auto;
             /* 盒子阴影  x,y，模糊半径，扩散半径 内阴影inset,如果不写默认就是外阴影*/
-            /* box-shadow: 0 0 10px 10px inset rgba(0, 0, 0, 0.5) */
+            /* 1,阴影在 X 轴上的偏移量。正值向右，负值向左。此处为 0，阴影左右居中。 
+             2,  阴影在 Y 轴上的偏移量。正值向下，负值向上。此处为 0，阴影上下居中。
+             3.阴影边缘的模糊程度。值越大越模糊（柔和过渡）。不可为负值。
+             4.阴影尺寸向外（或向内）扩张的大小。正值扩大阴影，负值缩小阴影。此处为正值 10px，阴影比元素本身大一圈。
+             */
+            /* box-shadow: 10px 10px 10px 10px inset  rgba(0, 0, 0, 0.5); */
             /* box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 30px; */
             /* 过渡写到盒子身上。 谁做过渡给谁加 */
             transition: .3s;
@@ -19,7 +24,7 @@
         .box:hover{
             width: 220px;
             height: 220px;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 30px;
+            box-shadow: rgba(0, 0, 0, 0.1) 15px 15px 30px;
         }
     </style>
 </head>
